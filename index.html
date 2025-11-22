@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Futuristic Contact Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="bg-gradient">
+        <div class="gradient-orb orb-1"></div>
+        <div class="gradient-orb orb-2"></div>
+        <div class="gradient-orb orb-3"></div>
+    </div>
+    <div class="grid-overlay"></div>
+    <div class="scan-line"></div>
+
+    <div class="container">
+        <div class="corner-decoration top-left"></div>
+        <div class="corner-decoration top-right"></div>
+        <div class="corner-decoration bottom-left"></div>
+        <div class="corner-decoration bottom-right"></div>
+
+        <div class="header">
+            <h1>Contact Portal</h1>
+            <div class="title-line"></div>
+            <p class="subtitle">Establish communication link • Transmit your message</p>
+        </div>
+        
+        <div class="success-message" id="successMessage">
+            <strong>Transmission Successful!</strong>
+            Your message has been received. Response incoming within 24 hours.
+        </div>
+
+        <form id="contactForm" novalidate>
+            <div class="form-group">
+                <label for="name">Identity <span class="required">*</span></label>
+                <div class="input-wrapper">
+                    <input type="text" id="name" name="name" placeholder="Enter your designation">
+                </div>
+                <div class="error-message" id="nameError"></div>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Communication Channel <span class="required">*</span></label>
+                <div class="input-wrapper">
+                    <input type="email" id="email" name="email" placeholder="your.email@domain.com">
+                </div>
+                <div class="error-message" id="emailError"></div>
+            </div>
+
+            <div class="form-group">
+                <label for="message">Transmission Data <span class="required">*</span></label>
+                <div class="input-wrapper">
+                    <textarea id="message" name="message" placeholder="Enter your message payload..."></textarea>
+                </div>
+                <div class="char-count">
+                    <span id="charCount">0</span> / 500 bytes
+                </div>
+                <div class="error-message" id="messageError"></div>
+            </div>
+
+            <button type="submit" class="submit-btn">
+                <span>Initialize Transmission</span>
+            </button>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
